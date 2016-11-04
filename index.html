@@ -10,16 +10,16 @@
   <body>
    <div class="container">
      <div class="jumbotron">
-     <h1>Irina vrednaia 4iksa<h1>
+     <h1>Mamma Mia Pizza<h1>
      </div>
       <div class="order-pizza">
         <h3>Add a pizza to your order.</h3>
         <form>
           <div class="size form-group">
             <h4> Size:</h4>
-            <label class="checkbox-inline"><input type="radio" name="pie-size" value="small"> Small ($7)</label>
-            <label class="checkbox-inline"><input type="radio" name="pie-size" value="medium" checked> Medium ($9)</label>
-            <label class="checkbox-inline"><input type="radio" name="pie-size" value="large"> Large ($11)</label>
+            <label class="checkbox-inline"><input type="radio" name="pie-size" value1="small"> Small ($7)</label>
+            <label class="checkbox-inline"><input type="radio" name="pie-size" value1="medium" > Medium ($9)</label>
+            <label class="checkbox-inline"><input type="radio" name="pie-size" value1="large"> Large ($11)</label>
             <label class="checkbox-inline"><input type="radio" name="pie-size" value="extra large"> Extra Large ($13)</label>
           </div>
           <div class="meat-toppings  form-group">
@@ -76,32 +76,33 @@
             </label>
           </div>
           <div class="cheese  form-group">
-            <h4>Cheese on top(1.5):</h4>
+            <h4>Cheese on top($1.5 each):</h4>
             <label class="checkbox-inline">
-              <input type="checkbox" name="cheese-toppings" value="Pineapple">Blue
+              <input type="checkbox" name="cheese-toppings" value="Cheddar">Cheddar
             </label>
             <label class="checkbox-inline">
-                <input type="checkbox" name="cheese-toppings" value="Pineapple">Parmesan
+                <input type="checkbox" name="cheese-toppings" value="Parmesan">Parmesan
             </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="cheese-toppings" value="Pineapple">Russian
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="cheese-toppings" value="Pineapple">Russian
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="cheese-toppings" value="Pineapple">Russian
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="cheese-toppings" value="Pineapple">Russian
-                </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="cheese-toppings" value="Brie">Brie
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="cheese-toppings" value="Smoked Gouda">Smoked Gouda
+
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="cheese-toppings" value="Camembert">Camembert
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="cheese-toppings" value="Manchego">Manchego
+            </label>
           </div>
           <button type="submit" class="btn btn-success">Calculate Price</button>
         </form>
       </div>
           <div class="total">
        <h3>Total Cost: <span id="pizza-list-total-cost"></span></h3>
-       <table class="regNumber">
+       <table class="totalcost">
          <tr>
            <td ></td>
          </tr>
