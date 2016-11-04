@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza</title>
+  </head>
+  <body>
+   <div class="container">
+     <div class="jumbotron">
+     <h1>Irina vrednaia 4iksa<h1>
+     </div>
+      <div class="order-pizza">
+        <h3>Add a pizza to your order.</h3>
+        <form>
+          <div class="size form-group">
+            <h4> Size:</h4>
+            <label class="checkbox-inline"><input type="radio" name="pie-size" value="small"> Small ($7)</label>
+            <label class="checkbox-inline"><input type="radio" name="pie-size" value="medium" checked> Medium ($9)</label>
+            <label class="checkbox-inline"><input type="radio" name="pie-size" value="large"> Large ($11)</label>
+            <label class="checkbox-inline"><input type="radio" name="pie-size" value="extra large"> Extra Large ($13)</label>
+          </div>
+          <div class="meat-toppings  form-group">
+            <h4>Meats: ($1.25 each) </h4>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="meat-toppings" value="Pepperoni">Pepperoni
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="meat-toppings" value="Sausage">Sausage
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="meat-toppings" value="Ham">Ham
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="meat-toppings" value="Meatball">Meatball
+            </label>
+
+            <label class="checkbox-inline">
+              <input type="checkbox" name="meat-toppings" value="Bacon">Bacon
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="meat-toppings" value="Grilled Chicken">Grilled Chicken
+            </label>
+
+          </div>
+          <div class="veg-toppings  form-group">
+            <h4>Veggies: ($0.75 each) </h4>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="veg-toppings" value="Olives">Olives
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="veg-toppings" value="Tomatoes">Tomatoes
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="veg-toppings" value="Onions">Onions
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="veg-toppings" value="Green Peppers">Green Peppers
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="veg-toppings" value="Mushrooms">Mushrooms
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="veg-toppings" value="Basil">Basil
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="veg-toppings" value="Spinach">Spinach
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="veg-toppings" value="Banana Peppers">Banana Peppers
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="veg-toppings" value="Pineapple">Pineapple
+            </label>
+          </div>
+          <div class="cheese  form-group">
+            <h4>Cheese on top(1.5):</h4>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="cheese-toppings" value="Pineapple">Blue
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="cheese-toppings" value="Pineapple">Parmesan
+            </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="cheese-toppings" value="Pineapple">Russian
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="cheese-toppings" value="Pineapple">Russian
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="cheese-toppings" value="Pineapple">Russian
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="cheese-toppings" value="Pineapple">Russian
+                </label>
+          </div>
+          <button type="submit" class="btn btn-success">Calculate Price</button>
+        </form>
+      </div>
+          <div class="total">
+       <h3>Total Cost: <span id="pizza-list-total-cost"></span></h3>
+       <table class="regNumber">
+         <tr>
+           <td ></td>
+         </tr>
+       </table>
+        </div>
+    </div>
+  </body>
+</html>
