@@ -20,7 +20,7 @@ _HTML CSS Bootstrap JavaScript jQuery_
 _Clone the repository
 Open the index.html file_
 ### link:
-  _https://vasyarogov84.github.io/Ping-pong-friday-project/_
+  _https://vasyarogov84.github.io/Pizzaproject-4-th-Friday-/_
 ### License
 
 Copyright (c) 2016 **_{Viktor Grom}_**

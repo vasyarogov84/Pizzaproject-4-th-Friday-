@@ -2,11 +2,13 @@
 
 $(document).ready(function () {
   $(".btn-success").click(function(event){
-event.preventDefault();
+ event.preventDefault();
     totalPrice();
 });
 
 function totalPrice() {
+  var orderedPizza={};
+    $(".totalcost tr td p").remove();
   var size = $(".size input[type=radio]:checked").val();
   var meats = $(".meat-toppings input[type=checkbox]:checked").length;
   var veggie = $(".veg-toppings input[type=checkbox]:checked").length;
@@ -15,32 +17,33 @@ function totalPrice() {
 
   var orderedPizza = new Pizza(size, meats, cheese, veggie);
 
-  var totalCost = orderedPizza.priceCalc();
-  $(".totalcost tr td").append('<td>'+totalCost+'</td>');
+  var totalCost = orderedPizza.addtoPrice();
+  $(".totalcost tr td").append('<p>'+totalCost+'</p>');
 }
 
 
 // Business Logic
 
 function Pizza(size, meats, cheese, veggie) {
-  this.pizzaSize = size;
+  this.pizzaSize = size
   this.cheeseNumber = cheese;
   this.meatToppings = meats;
   this.vegToppings = veggie;
+
 }
 
-Pizza.prototype.priceCalc = function() {
-  var cost = 0;
+Pizza.prototype.addtoPrice = function() {
+  var cost = 7;
   if (this.pizzaSize === "medium") {
-    cost = 9;
+    cost += 2;
   } else if (this.pizzaSize === "small") {
-    cost = 7;
+    cost += 0;
   } else if (this.pizzaSize === "large") {
-    cost = 11;
-  } else   {
-    cost = 13;
+    cost += 4;
+  } else if (this.pizzaSize === "extra large")  {
+    cost += 6;
   }
-  cost = cost + this.meatToppings*1.25 +this.vegToppings*0.75 + this.cheeseNumber*1.5;
+  cost = cost + this.meatToppings*(2) +this.vegToppings*(0.75) + this.cheeseNumber*(1.5);
   return cost;
 }
 
