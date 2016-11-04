@@ -1,12 +1,29 @@
+// UI Logic
+
 $(document).ready(function () {
   $(".btn-success").click(function(event){
 event.preventDefault();
     totalPrice();
-  });
+});
 
+function totalPrice() {
+  var size = $(".size input[type=radio]:checked").val();
+  var meats = $(".meat-toppings input[type=checkbox]:checked").length;
+  var veggie = $(".veg-toppings input[type=checkbox]:checked").length;
+  var cheese = $(".cheese input[type=checkbox]:checked").length;
+
+
+  var orderedPizza = new Pizza(size, meats, cheese, veggie);
+
+  var totalCost = orderedPizza.priceCalc();
+  $(".totalcost tr td").append('<td>'+totalCost+'</td>');
+}
+
+
+// Business Logic
 
 function Pizza(size, meats, cheese, veggie) {
-  this.pizzaSize = size
+  this.pizzaSize = size;
   this.cheeseNumber = cheese;
   this.meatToppings = meats;
   this.vegToppings = veggie;
@@ -27,17 +44,5 @@ Pizza.prototype.priceCalc = function() {
   return cost;
 }
 
-  function totalPrice() {
-    var size = $(".size input[type=radio]:checked").val();
-    var meats = $(".meat-toppings input[type=checkbox]:checked").length;
-    var veggie = $(".veg-toppings input[type=checkbox]:checked").length;
-    var cheese = $(".cheese input[type=checkbox]:checked").length;
-
-
-    var orderedPizza = new Pizza(size, meats, cheese, veggie);
-
-    var totalCost = orderedPizza.priceCalc();
-    $(".totalcost tr td").append('<p>'+totalCost+'</p>');
-  }
 
 });
